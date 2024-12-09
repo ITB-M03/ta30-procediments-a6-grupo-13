@@ -5,7 +5,6 @@ import java.util.*
 
 
 //Creamos la lista data class con sus valores
-
 data class Punt (
     var x: Float,
     var y: Float
@@ -20,31 +19,27 @@ fun main(){
     var numero = pedirNumero("Introduce un numero:",scan)
     var numero2 = pedirNumero("Introduce un numero:",scan)
 
-    numero = mostrarPuntos(numero)
-    numero2= mostrarPuntos(numero2)
+    // Creamos el punto
+    val punt = Punt(numero, numero2)
+    //Mostramos los puntos por pantalla
+    mostrarPuntos(punt)
 
     //Llamamos a la funcion de cerrar scanner
     cerrarScanner(scan)
-
 }
 
 //Funcion para pedir numero
 fun pedirNumero (msg: String, scan: Scanner) : Float{
-    //Le damos el valor al numero
-    var num : Float
     //Imprimimos el mensaje
     print(msg)
-    //Scaneamos el numero
-    num = scan.nextFloat()
     //Devolvemos el numero
-    return num
+    return scan.nextFloat()
 }
 
 //Creamos la funcion mostrarPuntos
-fun mostrarPuntos (x: Float) :Float {
-    var a = String.format("%.5f", x)
-    return a.toFloat()
-
+fun mostrarPuntos (punt: Punt)  {
+    var puntos = String.format("%.5f %.5f ", punt.x, punt.y)
+    println(puntos)
 }
 
 
