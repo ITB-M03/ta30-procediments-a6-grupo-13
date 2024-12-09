@@ -24,6 +24,13 @@ fun main(){
     //Mostramos los puntos por pantalla
     mostrarPuntos(punt)
 
+
+    var numero_suma = pedirNumero("Introduce un numero:",scan)
+    var numero2_suma = pedirNumero("Introduce un numero:",scan)
+
+
+    suma(numero, numero2, numero_suma,numero2_suma)
+
     //Llamamos a la funcion de cerrar scanner
     cerrarScanner(scan)
 }
@@ -38,8 +45,16 @@ fun pedirNumero (msg: String, scan: Scanner) : Float{
 
 //Creamos la funcion mostrarPuntos
 fun mostrarPuntos (punt: Punt)  {
-    var puntos = String.format("%.5f %.5f ", punt.x, punt.y)
-    println(puntos)
+    var puntos = String.format("%.5f %.5f ", punt.x, punt.y).toMutableList()
+    return println(puntos)
+}
+
+//Creamos la funcion de suma
+fun suma (x:Float, y: Float, a:Float, b:Float) {
+
+    var sum1= x+a
+    var sum2= y+b
+    var puntos = String.format("%.5f %.5f ", a, b, c, d).toMutableList()
 }
 
 
