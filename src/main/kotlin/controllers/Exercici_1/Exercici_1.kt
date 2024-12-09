@@ -18,9 +18,12 @@ fun main(){
 
     //Hacemos una funcion para pedir numero
     var numero = pedirNumero("Introduce un numero:",scan)
+    var numero2 = pedirNumero("Introduce un numero:",scan)
+
+    mostrarPuntos(numero,numero2)
 
 
-
+    println(mostrarPuntos())
 
 
     //Llamamos a la funcion de cerrar scanner
@@ -29,19 +32,27 @@ fun main(){
 }
 
 //Funcion para pedir numero
-fun pedirNumero (msg: String, scan: Scanner) : String{
+fun pedirNumero (msg: String, scan: Scanner) : Float{
     //Le damos el valor al numero
-    var num : String
+    var num : Float
     //Imprimimos el mensaje
     print(msg)
     //Scaneamos el numero
-    num = scan.nextLine()
+    num = scan.nextFloat()
     //Devolvemos el numero
     return num
 }
 
 //Creamos la funcion mostrarPuntos
-fun mostrarPuntos (x: Float ,y:Float ) {
+fun mostrarPuntos (x, y) {
+
+    var a = String.format("%.5f", x)
+    var b = String.format("%.5f", x)
+
+    return a
+    return b
+
+
 
 }
 
