@@ -16,6 +16,10 @@ fun main(){
     //Llamamos a la funcion de abrir scannner
     var scan : Scanner = abrirScanner()
 
+    //Hacemos una funcion para pedir numero
+    var numero = pedirNumero("Introduce un numero:",scan)
+
+
 
 
 
@@ -24,6 +28,22 @@ fun main(){
 
 }
 
+//Funcion para pedir numero
+fun pedirNumero (msg: String, scan: Scanner) : String{
+    //Le damos el valor al numero
+    var num : String
+    //Imprimimos el mensaje
+    print(msg)
+    //Scaneamos el numero
+    num = scan.nextLine()
+    //Devolvemos el numero
+    return num
+}
+
 //Creamos la funcion mostrarPuntos
-fun mostrarPuntos (x: Float, y: Float) {}
+fun mostrarPuntos (x: Float ,y:Float ) {
+
+}
+
+
 
