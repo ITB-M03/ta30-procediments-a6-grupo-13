@@ -25,9 +25,5 @@ fun main(){
 }
 
 //Creamos la funcion mostrarPuntos
-fun mostrarPuntos (x: Float, y: Float): Float {
-
-
-
-}
+fun mostrarPuntos (x: Float, y: Float) {}
 
